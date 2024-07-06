@@ -1,0 +1,33 @@
+flask db init
+flask db migrate -m "Initial migration."
+flask db upgrade
+
+
+
+#Activate virtual environment to run the installs
+python3 -m venv venv
+source venv/bin/activate
+pip install Flask Flask-SQLAlchemy Flask-Migrate
+
+
+
+
+
+
+
+# Activate your virtual environment
+
+source venv/bin/activate
+
+# Set the FLASK_APP environment variable
+# On macOS and Linux:
+export FLASK_APP=run.py
+
+# Initialize the migrations directory
+flask db init
+
+# Create an initial migration
+flask db migrate -m "Initial migration."
+
+# Apply the migration
+flask db upgrade
